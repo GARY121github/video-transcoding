@@ -39,6 +39,10 @@ export const TranscodeVideos = async (event: S3Event) => {
                         name: config.AWS_ECS_CONTAINER_NAME,
                         environment: [
                             {
+                                name: "AWS_REGION",
+                                value: config.AWS_REGION,
+                            },
+                            {
                                 name: "BUCKET_NAME",
                                 value: bucket.name,
                             },
@@ -53,6 +57,10 @@ export const TranscodeVideos = async (event: S3Event) => {
                             {
                                 name: "AWS_SECRET_ACCESS_KEY",
                                 value: config.AWS_SECRET_ACCESS_KEY
+                            },
+                            {
+                                name: "VIDEO_STATUS_API",
+                                value: config.VIDEO_STATUS_API
                             }
                         ],
                     },

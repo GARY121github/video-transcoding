@@ -6,6 +6,7 @@ interface Config {
     AWS_ECS_TASK_ARN: string;
     AWS_ECS_CLUSTER_ARN: string;
     AWS_ECS_CONTAINER_NAME: string;
+    VIDEO_STATUS_API: string;
 }
 
 const config : Config = {
@@ -15,7 +16,8 @@ const config : Config = {
     AWS_SQS_QUEUE_URL: process.env.AWS_SQS_QUEUE_URL || "",
     AWS_ECS_TASK_ARN: process.env.AWS_ECS_TASK_ARN || "",
     AWS_ECS_CLUSTER_ARN: process.env.AWS_ECS_CLUSTER_ARN || "",
-    AWS_ECS_CONTAINER_NAME: process.env.AWS_ECS_CONTAINER_NAME || ""
+    AWS_ECS_CONTAINER_NAME: process.env.AWS_ECS_CONTAINER_NAME || "",
+    VIDEO_STATUS_API: process.env.VIDEO_STATUS_API || ""
 }
 
 export default config;

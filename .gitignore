@@ -2,6 +2,7 @@
 node_modules/
 npm-debug.log
 yarn-error.log
+container
 
 # Dependency directories
 /.pnp
@@ -12,6 +13,7 @@ yarn-error.log
 
 # Build output
 /build
+/dist
 
 # Environment variables
 .env
